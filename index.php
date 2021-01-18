@@ -1,5 +1,6 @@
 <?php
     include_once __DIR__ .'/product/Smartphone.php';
+    include_once __DIR__ .'/product/SmartTv.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +18,21 @@
         ?>
 
         modello : 
-            <?php
-               echo $telefono->printName();
-            ?>
+        <?php
+            echo $telefono->printName();
+        ?>
+
+        <?php 
+            $tv = new SmartTv('Sony OLED 8k', 'Smart TV', '5900 euro');
+            var_dump($tv);
+        ?>
+
+        modello:
+        <?php 
+           echo $tv->printName();
+        ?>
+
+        
 
         
     </div>
