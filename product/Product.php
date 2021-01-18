@@ -14,7 +14,7 @@ class Product {
 
     public function printName(){
 
-        return  $this->name . ' - ' . $this->type;
+        return  $this->type . ' - ' . $this->name;
     }
 
 }

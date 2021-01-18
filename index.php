@@ -1,6 +1,8 @@
 <?php
     include_once __DIR__ .'/product/Smartphone.php';
     include_once __DIR__ .'/product/SmartTv.php';
+    include_once __DIR__ .'/product/Macbook.php';
+    include_once __DIR__ .'/product/Nikon.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@
             var_dump($telefono);
         ?>
 
-        modello : 
+        categoria : 
         <?php
             echo $telefono->printName();
         ?>
@@ -27,9 +29,30 @@
             var_dump($tv);
         ?>
 
-        modello:
+        categoria:
         <?php 
            echo $tv->printName();
+        ?>
+
+        <?php 
+            $mac= new Macbook('Macbook Pro 13"', 'Apple Laptop', '1500 euro', 'Retina Display 2k');
+            var_dump($mac)
+        ?>
+
+        categoria: 
+        <?php
+           echo $mac->printName(); 
+        ?>
+
+        <?php 
+            $camera = new Nikon('Nikon Z7 II', 'Camera', '3500 euro', '45,7 megapixels', 'Full Frame Sensor');
+            var_dump($camera);
+        ?>
+
+        categoria:
+
+        <?php 
+            echo $camera->printName();
         ?>
 
         
